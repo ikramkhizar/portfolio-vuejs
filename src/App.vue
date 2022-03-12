@@ -1,12 +1,12 @@
 <template>
   <transition name="fade" tag="div" class="wrapper" mode="out-in">
     <div class="wrapper" v-if="isLoaded" id="app">
-      <LandingPage :user="user" />
-      <Description :user="user" :content="findSlug('description')" :links="findSlug('links')" />
+      <LandingPage />
+      <Description />
       <Experience :content="findSlug('experiences')" />
-      <Skills :content="findSlug('skills')" />
+      <Skills />
       <Projects :content="findSlug('projects')" />
-      <Footer :user="user" :links="findSlug('links')" />
+      <Footer />
     </div>
   </transition>
 </template>

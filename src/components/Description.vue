@@ -1,21 +1,21 @@
 <template>
     <section id="about">
         <AnimateOnVisible name="fadeDown" :duration="1">
-            <Title :title="content.metadata.title" :description="content.metadata.description" />
+            <Title title="ABOUT ME" description="HOPE TO KNOW YOU AFTER" />
         </AnimateOnVisible>
 
         <AnimateOnVisible name="fadeRight" :duration="1">
             <div class="section-content">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
-                        <Photo :user="user"/>
+                        <Photo />
                     </div>
                     <div class="row">
                         <div class="col-md-7 mr-auto card-mobile">
-                            <Presentation :content="content"/>
+                            <Presentation />
                         </div>
                         <div class="col-md-4 card-mobile">
-                            <PersonnalCard :user="user" :links="links"/>
+                            <PersonnalCard />
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,6 @@
 
     export default {
         name: 'AboutMe',
-        props: ['user', 'content', 'links'],
         components: {
             Title,
             PersonnalCard,

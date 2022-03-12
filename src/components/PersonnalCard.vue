@@ -4,7 +4,7 @@
     <div class="data"><strong>E-mail:</strong> ikramkhizer@gmail.com</div>
     <div class="data"><strong>City:</strong> Faisalabad, Pakistan</div>
     <div class="data"><strong>Languages:</strong> Urdu, English</div>
-    <SocialBar :links="links"/>
+    <SocialBar />
   </div>
 </template>
 
@@ -13,7 +13,6 @@ import SocialBar from './SocialBar.vue'
 
 export default {
     name: 'PersonnalCard',
-    props: ['user', 'links'],
     components: {
         SocialBar,
     }
