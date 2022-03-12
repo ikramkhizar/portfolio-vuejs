@@ -1,10 +1,9 @@
 <template>
   <div>
-    <h3>{{ user.name }}</h3>
-    <div class="data"><strong>E-mail:</strong> {{ user.email }}</div>
-    <div class="data"><strong>Phone:</strong> {{ user.phone }}</div>
-    <div class="data"><strong>City:</strong> {{ user.city }}</div>
-    <div class="data"><strong>Languages:</strong> {{ user.lang }}</div>
+    <h3>Ikram Khizer</h3>
+    <div class="data"><strong>E-mail:</strong> ikramkhizer@gmail.com</div>
+    <div class="data"><strong>City:</strong> Faisalabad, Pakistan</div>
+    <div class="data"><strong>Languages:</strong> Urdu, English</div>
     <SocialBar :links="links"/>
   </div>
 </template>

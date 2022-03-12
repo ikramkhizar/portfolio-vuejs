@@ -3,11 +3,11 @@
     <div class="name">
       <div class="wrapper-name">
         <AnimateOnVisible name="fadeDown" ::duration="1">
-          <h1>{{ user.name }}</h1>
+          <h1>Ikram Khizer</h1>
         </AnimateOnVisible>
         <hr />
         <AnimateOnVisible name="fadeUp" ::duration="1">
-          <p>{{ user.status }}</p>
+          <p>Full-Stack Web Developer</p>
         </AnimateOnVisible>
       </div>
     </div>
