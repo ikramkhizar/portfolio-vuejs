@@ -1,26 +1,14 @@
 <template>
    <section id="projects">
       <AnimateOnVisible name="fadeDown" :duration="1">
-         <Title
-         class="title"
-         :title="content.metadata.title"
-         :description="content.metadata.description"
-         />
+         <Title class="title" title="My Projects" description="This is my story"/>
       </AnimateOnVisible>
 
       <div class="container-fluid center-block">
          <article class="content text-center">
-
             <AnimateOnVisible class="timeline mx-auto" v-for="(post, index) in projects" :key="index" name="fadeLeft" :duration="0.5">
-               <vue-timeline-update
-               :date="new Date(post.date)"
-               :title="post.title"
-               :description="post.content"
-               :thumbnail="getImgUrl(post.image)"
-               :color="post.color"
-               :category="post.tag"
-               icon="code"
-               />
+               <vue-timeline-update :date="new Date(post.date)" :title="post.title" :description="post.content" :thumbnail="getImgUrl(post.image)"
+                  :color="post.color" :category="post.tag" icon="code"/>
             </AnimateOnVisible>
          </article>
       </div>
@@ -28,87 +16,74 @@
 </template>
 
 <script>
-   import Title from "./Title.vue";
-
    export default {
       name: "Projects",
       data () {
          return {
             projects: [
             {
-               "title": "IG_Automation_Bot (Work in progress)",
-               "content": "Python script for Instagram automation using Instaloader. Used for auto following and DM. Easily configurable through Yaml config files!<br><br>Link : <a href='https://github.com/hbollon/IG_Automation_Bot'>https://github.com/hbollon/IG_Automation_Bot</a>",
-               "link": "https://github.com/hbollon/IG_Automation_Bot",
-               "image": "ig.gif",
+               "title": "Telemart",
+               "content": "Telemart, is a known name in the e-commerce sphere of Pakistan, owned by Tradelink enterprise. The parent company, Tradelink, has been dealing in electronics and selling mobile phones in Pakistan since 1991.<br><br>Link : <a href='https://www.telemart.pk/'>https://www.telemart.pk/</a>",
+               "link": "https://www.telemart.pk/",
+               "image": "telemart.png",
+               "tag": "Ecommerce",
+               "color": "blue",
+               "date": "2022-03-22"
+            },
+            {
+               "title": "Complaint Registration Portal Pakistan",
+               "content": "Web Based Portal for customers and officials to file, track and manage consumer service complaints.!<br><br>Link : <a href='https://consumerservice.punjab.gov.pk/'>https://consumerservice.punjab.gov.pk/</a>",
+               "link": "https://consumerservice.punjab.gov.pk/",
+               "image": "consumerservice.png",
                "tag": "Software",
                "color": "red",
-               "date": "2020-11-02"
+               "date": "2020-05-02"
             },
             {
-               "title": "Go-edlib",
-               "content": "Golang string comparison and edit distance algorithms library, featuring : Levenshtein, LCS, Hamming, Damerau levenshtein (OSA and Adjacent transpositions algorithms), Jaro-Winkler, Cosine, etc.<br><br>Link : <a href='https://github.com/hbollon/go-edlib'>https://github.com/hbollon/go-edlib</a>",
-               "link": "https://github.com/hbollon/go-edlib",
-               "image": "edlib.jpg",
-               "tag": "Library",
-               "color": "blue",
-               "date": "2020-08-25"
+               "title": "Kabayan Remit",
+               "content": "Kabayan Remit provides a fast, affordable, and convenient way of sending money to the Philippines.<br><br>Link : <a href='https://kabayanremit.com/'>https://kabayanremit.com/</a>",
+               "link": "https://kabayanremit.com/",
+               "image": "kabayanremit.png",
+               "tag": "Software",
+               "color": "red",
+               "date": "2021-04-12"
             },
             {
-               "title": "Gyro'Ball",
-               "content": "3D labyrinth game project for Android using Unity. Use device gyroscope.<br><br>Link : <a href='https://play.google.com/store/apps/details?id=com.BitsPlease.GyroBall&hl=fr&fbclid=IwAR0itwUAcbpAl3TgkFGiSrQz_CHTRpWjSXTQZqNGPESikdOJWZ6DIrk5qAA'>Google Play</a>",
-               "link": "https://play.google.com/store/apps/details?id=com.BitsPlease.GyroBall&hl=fr&fbclid=IwAR0itwUAcbpAl3TgkFGiSrQz_CHTRpWjSXTQZqNGPESikdOJWZ6DIrk5qAA",
-               "image": "gyroball.jpg",
-               "tag": "Video Game",
-               "color": "purple",
-               "date": "2020-07-28"
-            },
-            {
-               "title": "GyroscopeControl",
-               "content": "Unity script used for smooth and customizable object rotation with gyroscope. It include initial calibration with offset, rotation speed, smoothing parameter editable in Unity inspector and debug overlay.<br><br>Link : <a href='https://github.com/hbollon/GyroscopeControl'>https://github.com/hbollon/GyroscopeControl</a>",
-               "link": "https://github.com/hbollon/GyroscopeControl",
-               "image": "",
-               "tag": "Script",
+               "title": "Venderei",
+               "content": "Venderei is a humanized platform, focused on giving you personalized support to help you create your products and sell on a high scale from the beginning!<br><br>Link : <a href='https://venderei.com/'>https://venderei.com/</a>",
+               "link": "https://venderei.com/",
+               "image": "venderei.png",
+               "tag": "Saas",
                "color": "green",
-               "date": "2020-06-17"
+               "date": "2020-12-08"
             },
             {
-               "title": "Urbalog",
-               "content": "Android adaptation of board game using Nearby Connections API and Java for the LAET<br><br>Link : <a href='https://github.com/hbollon/Urbalog'>https://github.com/hbollon/Urbalog</a>",
-               "link": "https://github.com/hbollon/Urbalog",
-               "image": "urba.jpg",
-               "tag": "Video Game",
-               "color": "purple",
-               "date": "2020-05-19"
+               "title": "Spooray",
+               "content": "Spooray – The Party App That Sprays Cash Virtually.<br><br>Link : <a href='https://spooray.com/'>https://spooray.com/</a>",
+               "link": "https://spooray.com/",
+               "image": "spooray.png",
+               "tag": "Software",
+               "color": "red",
+               "date": "2021-12-28"
             },
             {
-               "title": "android-sqlite-toolbox",
-               "content": "Android java package designed to manage any sqlite database. Includes creation of the db and interactions with it (CRUD), import and export in several file formats (easily adaptable to any other format) and synchronization in http.<br><br>Link : <a href='https://github.com/hbollon/android-sqlite-toolbox'>https://github.com/hbollon/android-sqlite-toolbox</a>",
-               "link": "https://github.com/hbollon/android-sqlite-toolbox",
-               "image": "",
-               "tag": "Library",
+               "title": "Photograpshs by Steven",
+               "content": "Bringing his photography to life.<br><br>Link : <a href='https://photographsbysteven.shop/'>https://photographsbysteven.shop/</a>",
+               "link": "https://photographsbysteven.shop/",
+               "image": "photographsbysteven.png",
+               "tag": "Ecommerce",
                "color": "blue",
-               "date": "2020-05-08"
+               "date": "2022-03-11"
             },
-            {
-               "title": "Le-Parrainage-Boursorama",
-               "content": "Website built with Laravel. Used to promote and manage sponsorships for a online bank. Hosted on personnal vps.<br><br>Link : <a href='https://le-parrainage-boursorama.fr'>https://le-parrainage-boursorama.fr</a>",
-               "link": "https://le-parrainage-boursorama.fr",
-               "image": "boursoweb.jpg",
-               "tag": "Website",
-               "color": "orange",
-               "date": "2019-09-15"
-            }
             ]
          }
       },
-      props: ['content'],
       components: {
-         Title
+         Title: () => import('./Title'),
       },
       methods: {
          getImgUrl(img) {
-            if(img == undefined || img == "")
-               return ""
+            if(img == undefined || img == "") return ""
             return require('../assets/img/projects/'+img)
          },
       },

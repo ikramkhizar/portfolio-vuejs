@@ -20,10 +20,11 @@
 </template>
 
 <script>
-   import Title from './Title.vue'
-
    export default {
       name: 'Skills',
+      components: {
+         Title: () => import('./Title'),
+      },
       data () {
          return {
             skills: [
@@ -125,9 +126,6 @@
             },
             ]
          }
-      },
-      components: {
-         Title,
       },
       props: ['content'],
       methods: {

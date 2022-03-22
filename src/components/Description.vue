@@ -25,18 +25,13 @@
 </template>
 
 <script>
-    import Title from './Title.vue'
-    import PersonnalCard from './PersonnalCard.vue'
-    import Presentation from './Presentation.vue'
-    import Photo from './Photo.vue'
-
     export default {
         name: 'AboutMe',
         components: {
-            Title,
-            PersonnalCard,
-            Presentation,
-            Photo
+            Title: () => import('./Title'),
+            PersonnalCard: () => import('./PersonnalCard'),
+            Presentation: () => import('./Presentation'),
+            Photo: () => import('./Photo')
         },
     }
 </script>

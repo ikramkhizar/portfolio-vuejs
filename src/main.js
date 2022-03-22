@@ -1,10 +1,7 @@
 import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue';
 import App from './App.vue'
 
 import AnimateOnVisible from "./components/AnimateOnVisible.vue"
-
-Vue.use(BootstrapVue)
 
 import VueTimeline from "@growthbunker/vuetimeline";
 
@@ -26,5 +23,4 @@ new Vue({
 }).$mount('#app')
 
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './styles/global.scss'
