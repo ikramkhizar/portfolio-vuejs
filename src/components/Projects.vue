@@ -101,12 +101,12 @@
    }
 
    .title {
-      color: map-get($colors, light);
+      color: map-get($colors, light) !important;
    }
 
    /deep/ .text-wrapper {
       &:after {
-         border-bottom: 1px solid map-get($colors, dark);
+         border-bottom: 1px solid map-get($colors, dark) !important;
       }
    }
 
