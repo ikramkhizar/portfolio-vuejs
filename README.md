@@ -45,7 +45,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Author
 
-👤 **Hugo Bollon**
+👤 **[Hugo Bollon](https://github.com/hbollon/portfolio-vuejs)**
 
 * Github: [@ikramkhizer](https://github.com/ikramkhizar)
 * LinkedIn: [@Ikram Khizer](https://www.linkedin.com/in/ikramkhizer/)
@@ -53,4 +53,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## 🤝 Credit
 
-[Hugo Bollon!](https://github.com/hbollon/portfolio-vuejs). 
+[Hugo Bollon](https://github.com/hbollon/portfolio-vuejs)
