@@ -7,7 +7,7 @@
             </AnimateOnVisible>
             <hr />
             <AnimateOnVisible name="fadeUp" ::duration="1">
-               <p>Full Stack Web Developer</p>
+               <p>Full Stack Developer</p>
             </AnimateOnVisible>
             <AnimateOnVisible name="fadeUp" ::duration="1">
                <div class="hire-btn">
